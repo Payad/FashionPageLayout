@@ -1,3 +1,32 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(102, 51, 0);
+  height: 100vh;
+  width: 100%;
+}
+
+.left-col, .right-col {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.left-col {
+  z-index: 2;
+}
+
+.right-col {
+  z-index: 1;
+}
+
+.image {
+  height: 50vh;
+  background-size: cover;
+}
 
 /*# sourceMappingURL=styles.css.map */

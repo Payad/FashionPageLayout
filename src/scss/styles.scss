@@ -1,3 +1,35 @@
-// body {
-//     background-color: green;
-// }
+$brown: rgb(102, 51, 0);
+$lightbrown: rgb(153, 76, 0);
+$lightish: rgb(204, 102, 0);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $brown;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-col, .right-col {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.left-col {
+    z-index: 2;
+}
+
+.right-col {
+    z-index: 1;
+}
+
+.image {
+    // height: 100%;
+    height: 50vh;
+    background-size: cover;
+}
