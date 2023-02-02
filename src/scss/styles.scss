@@ -1,4 +1,4 @@
-$brown: rgb(102, 51, 0);
+$dark: rgb(102, 51, 0);
 $lightbrown: rgb(153, 76, 0);
 $lightish: rgb(204, 102, 0);
 
@@ -9,9 +9,23 @@ $lightish: rgb(204, 102, 0);
 body {
     margin: 0;
     padding: 0;
-    background-color: $brown;
+    background-color: $dark;
     height: 100vh;
     width: 100%;
+}
+
+header {
+    height: 10vh;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+main {
+    height: 98vh;
 }
 
 .left-col, .right-col {
@@ -26,6 +40,11 @@ body {
 
 .right-col {
     z-index: 1;
+    height: 100%;
+}
+
+img {
+    width: 20px;
 }
 
 .image {

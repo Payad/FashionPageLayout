@@ -10,6 +10,19 @@ body {
   width: 100%;
 }
 
+header {
+  height: 10vh;
+}
+header .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  height: 98vh;
+}
+
 .left-col, .right-col {
   position: relative;
   flex: 1;
@@ -22,6 +35,11 @@ body {
 
 .right-col {
   z-index: 1;
+  height: 100%;
+}
+
+img {
+  width: 20px;
 }
 
 .image {
