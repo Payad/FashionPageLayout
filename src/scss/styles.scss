@@ -1,6 +1,11 @@
-$dark: rgb(102, 51, 0);
-$lightbrown: rgb(153, 76, 0);
-$lightish: rgb(204, 102, 0);
+$primary: rgb(51, 25, 0,);
+$primary-dark: rgb(61, 11, 11);
+// $secondary: rgb(102, 51, 0);
+$dark: rgb(107, 23, 23);
+$light: rgb(164, 101, 101);
+$lighish: rgb(169, 113, 113);
+$nav: rgb(220, 178, 178);
+$nav-selected: rgb(215, 166, 166);
 
 * {
     box-sizing: border-box;
@@ -9,7 +14,8 @@ $lightish: rgb(204, 102, 0);
 body {
     margin: 0;
     padding: 0;
-    background-color: $dark;
+    // background-color: $dark;
+    background-color: $primary-dark;
     height: 100vh;
     width: 100%;
 }
@@ -21,6 +27,9 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        background-color: $light;
+        // height: inherit;
+        width: 100%;
     }
 }
 
@@ -34,14 +43,14 @@ main {
     min-width: 0;
 }
 
-.left-col {
-    z-index: 2;
-}
+// .left-col {
+//     z-index: 2;
+// }
 
-.right-col {
-    z-index: 1;
-    height: 100%;
-}
+// .right-col {
+//     z-index: 1;
+//     height: 100%;
+// }
 
 img {
     width: 20px;
