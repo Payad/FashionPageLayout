@@ -3,7 +3,7 @@ $primary-dark: rgb(61, 11, 11);
 // $secondary: rgb(102, 51, 0);
 $dark: rgb(107, 23, 23);
 $light: rgb(164, 101, 101);
-$lighish: rgb(169, 113, 113);
+$lightish: rgb(169, 113, 113);
 $nav: rgb(220, 178, 178);
 $nav-selected: rgb(215, 166, 166);
 
@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     // background-color: $dark;
-    background-color: $primary-dark;
+    background-color: $dark;
     height: 100vh;
     width: 100%;
 }
@@ -27,20 +27,130 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: $light;
+        background-color: $nav;
         // height: inherit;
         width: 100%;
     }
+
+    .menu {
+        background-color: $light;
+    }
+}
+
+.container {
+    padding-left: 5vw;
 }
 
 main {
     height: 98vh;
+
+    nav {
+        position: absolute;
+    }
+
+    .pages {
+        // position: absolute;
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        background-color: $lightish;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $nav-selected;
+            height: 8px;
+            width: 8px;
+            left: -2px;
+        }
+    }
+
+    // h2 {
+    //     // display: flex;
+    //     // justify-content: center;
+    //     text-transform: uppercase;
+    //     margin-left: 2rem;
+
+    //     &::before {
+    //         display: block;
+    //         font-size: 20px;
+    //         content: '0' counter(header) "."
+    //     }
+    // }
+
+    ol.next-pages {
+        height: 100%;
+        width: 100%;
+        // padding: 0;
+        margin: 0;
+        counter-set: header 0 nextpage 1;
+        // background-color: $lightish;
+    
+
+        > li {
+            // width: 100%;
+            height: 100%;
+            counter-increment: header;
+            // display: flex;
+
+            .left-col, .right-col {
+                position: relative;
+                flex: 1;
+                min-width: 0;
+            }
+
+            h2 {
+                font-size: 50px;
+                color: $primary;
+                white-space: nowrap;
+                text-transform: uppercase;
+                margin-left: 2rem;
+
+                &::before {
+                    display: block;
+                    margin: 15px;
+                    content: '0' counter(header) "."
+
+                }
+            }
+        }
+
+
+        .thumbnail {
+            padding: 20px;
+        }
+    
+    
+    }
+
+   
+}
+
+h3 {
+    margin-left: 1rem;
 }
 
 .left-col, .right-col {
     position: relative;
     flex: 1;
     min-width: 0;
+}
+
+// footer > ol.next-pages {
+
+// }
+
+// h2 {
+//     display: flex;
+//     justify-content: center;
+// }
+
+p {
+    text-align: center;
+}
+
+img.nextImage {
+    // width: 50%;
+    width: 100%;
 }
 
 // .left-col {

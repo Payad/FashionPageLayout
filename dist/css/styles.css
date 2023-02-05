@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(61, 11, 11);
+  background-color: rgb(107, 23, 23);
   height: 100vh;
   width: 100%;
 }
@@ -17,18 +17,83 @@ header .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(164, 101, 101);
+  background-color: rgb(220, 178, 178);
   width: 100%;
+}
+header .menu {
+  background-color: rgb(164, 101, 101);
+}
+
+.container {
+  padding-left: 5vw;
 }
 
 main {
   height: 98vh;
+}
+main nav {
+  position: absolute;
+}
+main .pages {
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  background-color: rgb(169, 113, 113);
+  cursor: pointer;
+}
+main .pages:hover {
+  background-color: rgb(215, 166, 166);
+  height: 8px;
+  width: 8px;
+  left: -2px;
+}
+main ol.next-pages {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  counter-set: header 0 nextpage 1;
+}
+main ol.next-pages > li {
+  height: 100%;
+  counter-increment: header;
+}
+main ol.next-pages > li .left-col, main ol.next-pages > li .right-col {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+main ol.next-pages > li h2 {
+  font-size: 50px;
+  color: rgb(51, 25, 0);
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin-left: 2rem;
+}
+main ol.next-pages > li h2::before {
+  display: block;
+  margin: 15px;
+  content: "0" counter(header) ".";
+}
+main ol.next-pages .thumbnail {
+  padding: 20px;
+}
+
+h3 {
+  margin-left: 1rem;
 }
 
 .left-col, .right-col {
   position: relative;
   flex: 1;
   min-width: 0;
+}
+
+p {
+  text-align: center;
+}
+
+img.nextImage {
+  width: 100%;
 }
 
 img {
