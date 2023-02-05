@@ -25,7 +25,7 @@ header .menu {
 }
 
 .container {
-  padding-left: 5vw;
+  padding-left: 10vw;
 }
 
 main {
@@ -33,15 +33,18 @@ main {
 }
 main nav {
   position: absolute;
+  top: 300px;
+  left: 40px;
+  z-index: 20;
 }
-main .pages {
+main .page {
   border-radius: 50%;
   height: 6px;
   width: 6px;
   background-color: rgb(169, 113, 113);
   cursor: pointer;
 }
-main .pages:hover {
+main .page:hover {
   background-color: rgb(215, 166, 166);
   height: 8px;
   width: 8px;
@@ -62,6 +65,12 @@ main ol.next-pages > li .left-col, main ol.next-pages > li .right-col {
   flex: 1;
   min-width: 0;
 }
+main ol.next-pages > li .left-col {
+  z-index: 2;
+}
+main ol.next-pages > li .right-col {
+  z-index: 1;
+}
 main ol.next-pages > li h2 {
   font-size: 50px;
   color: rgb(51, 25, 0);
@@ -72,10 +81,8 @@ main ol.next-pages > li h2 {
 main ol.next-pages > li h2::before {
   display: block;
   margin: 15px;
+  font-size: 40px;
   content: "0" counter(header) ".";
-}
-main ol.next-pages .thumbnail {
-  padding: 20px;
 }
 
 h3 {
