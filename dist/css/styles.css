@@ -11,14 +11,16 @@ body {
 }
 
 header {
-  height: 7.5vh;
+  height: 7.6vh;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 10vh;
+}
+header img.fashionImg {
+  width: 30%;
 }
 header .menu {
   background-color: rgb(164, 101, 101);
@@ -26,11 +28,12 @@ header .menu {
 }
 
 .container {
-  padding-left: 10vw;
+  padding-left: 5vw;
 }
 
 main {
   height: 98vh;
+  background-color: rgb(169, 113, 113);
 }
 main nav {
   position: absolute;
@@ -50,6 +53,9 @@ main .page:hover {
   height: 8px;
   width: 8px;
   left: -2px;
+}
+main li {
+  list-style-type: none;
 }
 main ol.pages {
   height: 100%;
@@ -100,7 +106,7 @@ p {
 }
 
 img.nextImage {
-  width: 100%;
+  width: 50%;
 }
 
 img {
