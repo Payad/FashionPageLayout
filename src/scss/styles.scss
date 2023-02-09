@@ -47,11 +47,13 @@ header {
     }
 }
 
+// .left-col {
 .container {
     // padding-left: 10vw;
     // padding-left: 8vw;
     padding-left: 5vw;
 }
+// }
 
 main {
     height: 98vh;
@@ -94,9 +96,10 @@ main {
     //     }
     // }
 
-    li {
-        list-style-type: none;
-    }
+    // li {
+    //     list-style-type: none;
+    //     display: flex;
+    // }
 
     ol.pages {
         height: 100%;
@@ -128,17 +131,28 @@ main {
                 z-index: 1
             }
 
+            .next-arrow {
+                display: flex;
+                justify-content: center;
+                height: 50px;
+                align-items: center;
+            }
+
             h2 {
                 font-size: 20px;
                 color: $primary;
                 white-space: nowrap;
                 text-transform: uppercase;
+                padding: 10px;
                 // margin-left: 2rem;
+                // font-family: 'Ruthie', cursive;
+                font-family: 'Stardos Stencil', cursive;
 
                 &::before {
                     display: block;
                     margin: 15px;
-                    font-size: 30px;
+                    // font-size: 30px;
+                    font-size: 25px;
                     content: '0' counter(header) "."
 
                 }
@@ -177,12 +191,14 @@ h3 {
 
 p {
     text-align: center;
+    padding: 15px;
 }
 
 img.nextImage {
     // width: 50%;
     // width: 100%;
-    width: 50%;
+    // width: 50%;
+    width: 90%;
 }
 
 // .left-col {
