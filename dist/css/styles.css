@@ -37,15 +37,15 @@ main {
 }
 main nav {
   position: absolute;
-  top: 250px;
-  left: 40px;
+  top: 350px;
+  left: 10px;
   z-index: 20;
 }
 main .page {
   border-radius: 50%;
   height: 6px;
   width: 6px;
-  background-color: rgb(169, 113, 113);
+  background-color: black;
   cursor: pointer;
 }
 main .page:hover {
@@ -70,7 +70,7 @@ main ol.pages > li .left-col, main ol.pages > li .right-col {
   min-width: 0;
 }
 main ol.pages > li .left-col {
-  z-index: 2;
+  margin-left: -50px;
 }
 main ol.pages > li .right-col {
   z-index: 1;
@@ -80,6 +80,8 @@ main ol.pages > li .next-arrow {
   justify-content: center;
   height: 50px;
   align-items: center;
+  margin-top: -30px;
+  margin-right: 3rem;
 }
 main ol.pages > li h2 {
   font-size: 20px;
@@ -96,8 +98,18 @@ main ol.pages > li h2::before {
   content: "0" counter(header) ".";
 }
 
+li {
+  list-style: none;
+}
+
+ol.next-pages > li {
+  counter-increment: header 1 nextpage 1;
+}
+
 h3 {
-  margin-left: 1rem;
+  margin-left: 30px;
+  border: 2px solid purple;
+  width: 200px;
 }
 
 .left-col, .right-col {
@@ -122,6 +134,7 @@ img {
 .image {
   height: 50vh;
   background-size: cover;
+  margin-left: -40px;
 }
 
 /*# sourceMappingURL=styles.css.map */
